@@ -1,0 +1,17 @@
+<!-- <h1>Name: {{user.name}}</h1>
+<h1>Email: {{user.email}}</h1>
+<h1>Age: {{user.age}}</h1> -->
+<h2>Users:</h2>
+@for (user of users; track user.name) {
+    @if (user.age>20) {
+    <p>Name: {{user.name}}</p>
+    <p>Email: {{user.email}}</p>
+    <p>Age: {{user.age}}</p>
+    }
+}
+<button>Submit</button>
+<!-- <input type="text" [value]="inputValue" (change)="onInput($event)" placeholder="Enter your name" /> -->
+ <div>
+     <input type="text" [(ngModel)]="inputValue">
+ </div>
+<p>Entered value: {{inputValue}}</p>
